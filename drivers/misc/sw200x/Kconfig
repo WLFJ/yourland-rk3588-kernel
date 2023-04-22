@@ -1,0 +1,13 @@
+config ENC_SW2001
+    tristate "iSmartWare's encrypt IC"
+    depends on I2C
+    default y
+    help
+      This option to verify the valid of PCBA.
+
+config ENC_SW_I2C
+    int "encrypt IC bus num select"
+    depends on ENC_SW2001
+    default 1
+    help
+        Encrypt IC i2c bus slect configration.
